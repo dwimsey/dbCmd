@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+SCRIPTFILE=$(readlink "$0")
+BASEBINDIR=$(dirname "$SCRIPTFILE")
+BASEDIR=$(dirname "$BASEBINDIR")
+BASELIBDIR="${BASEDIR}/lib"
+java -jar ${BASELIBDIR}/dbcmd.jar $@
